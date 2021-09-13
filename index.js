@@ -61,10 +61,6 @@ body.appendChild(ul);*/
 const ul = document.createElement("ul")
 const li = document.createElement("li")*/
 
-
-
-
-
 //Ejercicio 3: Botones
 //Por cada ítem de la siguiente lista, crear un botón con el texto de dicho ítem. Al clickear un botón, debe aparecer un alert que diga Has clickeado el mes X, dependiendo del mes clickeado (por ejemplo, Has clickeado el mes: Mayo)
 
@@ -229,18 +225,45 @@ body {
   border-radius: 5px;
   font-size: 60px;
   font-weight: bold;
-}
-Por cada ítem de la siguiente matriz, agregar al elemento tablero un elemento div que contenga como texto dicho ítem:
-const tablero = [
-  ['X', 'O', 'X'],
-  ['O', 'X', 'X'],
-  ['O', 'O', 'X'],
-]
-Al clickear cada casilla, se debe cambiar el texto de la siguiente forma:
+}*/
+
+//Por cada ítem de la siguiente matriz, agregar al elemento tablero un elemento div que contenga como texto dicho ítem:
+/*Al clickear cada casilla, se debe cambiar el texto de la siguiente forma:
 Si hay una X, cambiar a una O
 Si hay una O, dejarla vacía
-Si está vacía, cambiar a una X
-Ejercicio 8: Grilla
+Si está vacía, cambiar a una X*/
+
+/*const tablero = [
+  ["X", "O", "X"],
+  ["O", "X", "X"],
+  ["O", "O", "X"],
+];
+
+const div = document.querySelector(".tablero");
+
+for (let i = 0; i < tablero.length; i++) {
+  for (let j = 0; j < tablero[i].length; j++) {
+    let casilla = document.createElement("div");
+    casilla.classList.add("casilla");
+    casilla.textContent = `${tablero[i][j]}`;
+    div.appendChild(casilla);
+
+    casilla.onclick = () => {
+      if (tablero[i][j] === "X") {
+        casilla.textContent = "O";
+      } else if (tablero[i][j] === "O") {
+        casilla.textContent = " ";
+      } else if (tablero[i][j] === " ") {
+        casilla.textContent = "X";
+      }
+    };
+  }
+}*/
+
+
+
+
+/*Ejercicio 8: Grilla
 Crear una función generarGrilla(filas, columnas, contenedor, claseCasilla) que tome por parámetros:
 
 un número filas, representando la cantidad de filas
