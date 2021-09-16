@@ -43,6 +43,7 @@ body.appendChild(ul);*/
 //Ejercicio 2: Listas anidadas
 //Replica la siguiente estructura HTML creando nodos mediante javascript
 
+
 /*<ul>
   <li>Verduras</li>
   <li>Garbanzos</li>
@@ -56,6 +57,27 @@ body.appendChild(ul);*/
     </ul>
   </li>
 </ul>*/
+
+
+/*const listas = ["Verduras","Garbanzos","Frutas","Manzanas", "Naranjas", "Bananas", "Frutillas"]
+const body = document.querySelector("body") 
+const ul = document.createElement("ul")
+
+for (let i = 0; i < listas.length-4; i++) {
+    const li = document.createElement("li")
+    li.textContent = `${listas[i]}`
+    ul.appendChild(li)
+    body.appendChild(ul)
+}
+const liFrutas = document.querySelector("ul li:last-child")
+const ulAnidado = document.createElement("ul")
+for (let i = 3; i < listas.length; i++) {
+    const li = document.createElement("li")
+    li.textContent = `${listas[i]}`
+    ulAnidado.appendChild(li)
+    liFrutas.appendChild(ulAnidado)
+     
+}*/
 
 /*const body = document.querySelector("body")
 const ul = document.createElement("ul")
@@ -272,15 +294,33 @@ un nodo HTML contenedor que es el elemento donde se va crear la grilla
 un string claseCasilla, que es la clase que se le va a agregar a cada casilla
 La función debe en el elemento contenedor agregar filas * columnas cantidad de casillas, con clase claseCasilla, de ancho ancho contenedor / columnas y de alto alto contenedor / filas.
 
-El elemento contenedor debe tener los siguientes estilos:
+*/
 
-.contenedor {
-   display: flex;
-   flex-wrap: wrap;
-   width: 800px;
-   height: 800px;
-   border: 1px solid #000;
+
+/*const body = document.querySelector("body")
+const contenedor = document.createElement("div")
+
+contenedor.classList.add("contenedor")
+
+
+body.appendChild(contenedor)
+
+const generarGrilla = (filas, columnas, contenedor, claseCasilla) =>{
+
+  for (let i = 0; i < filas*columnas; i++) {
+        const casilla = document.createElement("div")
+        casilla.classList.add(claseCasilla)
+        contenedor.appendChild(casilla)
+    
+    }
+ 
 }
+
+console.log(generarGrilla(10,10,contenedor,"claseCasilla"))
+*/
+
+/*
+
 Ejercicio 9: Puntaje
 Crear en un documento html un input y un div.
 
